@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+html {
+  font-size: 62.5%;  /* 62.5%=1em=1rem=10px=7.5pt */
+}
+
+body {
+  line-height: 1.8;      /* テキストの行間 */
+  letter-spacing: 1px;   /* 文字間のスペース */
+  word-break: break-all; /* ボックスからはみ出すとき改行するか */
+  background-color: #fff;
+  color: #000;
+}
+
+.header-wrap {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: space-between; /* 両端揃え */
+  margin-top: 1.5%;
+}
+
+.header-wrap__ttl h1 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 900;
+  font-size: 2.8rem;
+}
+
+.header-wrap__ttl p {
+  font-family: 'Noto Sans', sans-serif;
+  
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.header-wrap__ttl {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.header-wrap__nav {
+  width: 45%;
+}
+
+.header-wrap__nav__list {
+  display: flex;
+  justify-content: flex-end;  /* 末尾に寄 */
+  align-items: flex-end;
+  height: 40px;
+}
+
+.header-wrap__nav__list__item {
+  margin: 0 5%;
+}
+
+.header-wrap__nav__list__item a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.75rem;
+  transition: all 0.3s;
+}
+
+.header-wrap__nav__list__item a:hover {
+  opacity: 0.5;
+  border-bottom: solid 2px #000;
+}
+
+.top-wrap__bg {
+  background: url(../img/1.fv-img.jpg) no-repeat center;
+  width: 100%;
+  height: 75vh; /*Viewport Height（vh）：viewportの高さに基づく。1vhはviewportの高さの1%に相当する*/
+  overflow: hidden;
+  background-size: cover; /*元画像の縦横比は保持して、要素をちょうどよく覆うサイズに*/
+  position: relative; /* 要素を重ねる際の「基準」 */
+}
+
+.top-wrap__bg::after {
+  content: "";         /* 文字が見やすくなるように色を重ねる */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.top-wrap__inner {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* これを追加するとど真ん中になる。無いと要素の左上が真ん中になるだけ */
+  text-align: center;
+}
+
+.top-wrap__inner__ttl {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 5rem;
+}
+
+.top-wrap__inner__txt {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+
+/* --menu-- */
+
+.menu-wrap {
+  margin: 4% auto;
+}
+
+.menu-wrap__ttl {
+  background-image: url(../img/2.menu-head-img.jpg);
+  position: relative;
+}
+
+.ttl__bg {
+  width: 100%;
+  height: 15vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.s-ttl {
+  color: #fff;
+  position: absolute;
+  font-size: 7.2rem;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(1px 1px 10px #E5E5E5); /* (右(左)px 下(上)px ぼかし量px 色) */
+}
+
+
+.menu-wrap__con__block {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;  /* 複数行に折り返し */
+  justify-content: space-between;
+  
+}
+
+.menu-wrap__con__block__item {
+  width: 40%;
+  margin-top: 4%;
+
+  background-color: #F4ECE6;
+  padding: 3.5%;
+  
+}
+
+.menu-item__ttl {
+  display: flex;
+  width: max-content;
+  border-bottom: solid 3px #BE8E69;
+  margin-bottom: 3%;
+  align-items: flex-end;
+  text-align: center;
+
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.menu-item__ttl i {
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  margin: 1rem;
+  color: #000;
+  font-size: 3.6rem;
+}
+
+.menu-ttl {
+  font-size: 3.6rem;
+  line-height: 1.2;
+}
+
+
+
+/*.menu-ttl::after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  height: 1px;
+  background-color: #BE8E69;
+}*/
+
+table {
+  width: 100%;
+}
+
+tr {
+  border-bottom: dotted 0.3px #555;
+  font-size: 1.5rem;
+  height: 4rem;
+}
+
+td {
+  vertical-align: bottom;
+}
+
+
+/* --about-- */
+
+.about-wrap {
+  margin: 4% auto;
+}
+
+.about-wrap__ttl {
+  background-image: url(../img/3.about-head-img.jpg);
+  position: relative;
+}
+
+.about-wrap__con__block {
+  width: 80%;
+  display: flex;
+  margin: 4% auto;
+  justify-content: space-between;
+}
+
+.about-wrap__con__block__txt {
+  width: 48%;
+}
+
+.about-wrap__con__block__txt p {
+  font-size: 1.8rem;
+  line-height: 2;
+}
+
+.about-wrap__con__block__img {
+  aspect-ratio: 4 / 3;
+  width: 48%;
+}
+
+.about-wrap__con__block__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* --access--*/
+
+.access-wrap {
+  margin: 4% auto;
+}
+
+.access-wrap__ttl {
+  background-image: url(../img/5.access-hard.img.jpg);
+  position: relative;
+}
+
+.access-wrap__con {
+  width: 80%;
+  display: flex;
+  margin: 4% auto;
+  justify-content: space-between;
+}
+
+.access-wrap__con__map {
+  width: 48%;
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.access-wrap__con__txt {
+  width: 48%;
+}
+
+.address {
+  font-size: 1.8rem;
+}
+
+.tel {
+  font-size: 2rem;
+}
+
+.txt {
+  font-size: 1.5rem;
+}
+
+
+/* --contact--*/
+
+.contact-wrap__ttl {
+  background-image: url(../img/6.contact-head-img.jpg);
+  position: relative;
+}
+
+/*.contact-wrap__con {
+  background-color: #F4ECE6;
+}*/
+
+.contact-wrap__con__block {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background-color: #F4ECE6;
+}
+
+/*.contact-wrap {
+  background-color: #F4ECE6;
+  padding-bottom: 4%;
+}*/
+
+.contact-wrap__con__txt p {
+  font-size: 1.8rem;
+  padding-bottom: 4%;
+}
+
+.contact-wrap__con__btn a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.contact-wrap__con__btn {
+  padding: 1.5%;
+  background-color: #BE8E69;
+  width: 25%;
+  margin: 0 auto;
+  border-radius: 2rem;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 50%);
+}
+
+.contact-wrap__con__btn:hover {
+  cursor: pointer;
+  transition: all 0.5s;
+  
+  box-shadow: none;
+  transform: scale(0.99, 0.99) translateY(2px);
+}
+
+.footer-wrap {
+  padding: 2.5% 0;
+}
+
+.footer-wrap__right {
+  display: block;
+  text-align: center;
+}
